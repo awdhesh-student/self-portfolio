@@ -1,0 +1,137 @@
+// @import "../../app.scss";
+
+// .navbar {
+//   height: 100px;
+
+//   .wrapper {
+//     max-width: 1366px;
+
+//     margin: auto;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     height: 100%;
+//     padding: 0 50px;
+
+//     @include mobile{
+//       justify-content: flex-end;
+//       padding-right: 10px;
+//     }
+
+//     span {
+//       font-weight: bold;
+//       font-size: 30px;
+
+//       @include tablet {
+//         padding-left: 50px;
+//       }
+//       @include mobile{
+//         display: none;
+//       }
+//     }
+//   }
+
+//   .socials {
+//     display: flex;
+//     gap: 20px;
+
+//     @include mobile{
+//       gap: 15px;
+//     }
+
+//     img {
+//       width: 35px;
+//       height: 35px;
+//     }
+//   }
+// }
+
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 50px;
+
+    @include mobile {
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 30px;
+
+      @include tablet {
+        padding-left: 50px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+    gap: 20px;
+
+    @include mobile {
+      gap: 15px;
+    }
+
+    img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        content: attr(data-title);
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        font-size: 12px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 115%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
