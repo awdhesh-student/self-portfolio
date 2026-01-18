@@ -25,7 +25,9 @@ const frontendSkills = ["HTML & CSS",
    "ReactJS",
    "Material UI",
    " Bootstarp",
-   "Motion-Framer"
+   "Motion-Framer",
+   "Docker",
+   "Ant Design"
 ]
 
 const backendSkills = ["NodeJS",
@@ -37,6 +39,7 @@ const backendSkills = ["NodeJS",
 const programmingLanguages = ["JavaScript",
    "Python",
    "C++",
+   "TypeScript",
 ]
 
 const Skills = () => {
@@ -49,26 +52,26 @@ const Skills = () => {
          <motion.div className="titleContainer">
             <div className="title">
                <img src="./people.webp" alt="" />
-               <h1><motion.b whileHover={{color: "crimson"}}>Sharpening</motion.b> skills,</h1>
+               <h1><motion.b whileHover={{ color: "crimson" }}>Sharpening</motion.b> skills,</h1>
             </div>
             <div className="title">
-               <h1><motion.b whileHover={{color: "crimson"}}>building</motion.b> futures.</h1>
+               <h1><motion.b whileHover={{ color: "crimson" }}>building</motion.b> futures.</h1>
             </div>
          </motion.div>
          <motion.div className="listContainer" variants={variants}>
             <motion.div className="box" whileHover={{ background: "grey", color: "black" }} variants={variants}>
                <h2>Frontend Skills</h2>
                <ul>
-                  {frontendSkills.map((skills, index) => <motion.li whileHover={{color: "black"}} key={index}>{skills}</motion.li>)}
+                  {frontendSkills.map((skills, index) => <motion.li whileHover={{ color: "black" }} key={index}>{skills}</motion.li>)}
                </ul>
             </motion.div>
             <motion.div className="box" whileHover={{ background: "grey", color: "black" }} variants={variants}>
                <h2>Backend Skills</h2>
-               <ul>{backendSkills.map((skills, index) => <motion.li whileHover={{color: "black"}} key={index}>{skills}</motion.li>)}</ul>
+               <ul>{backendSkills.map((skills, index) => <motion.li whileHover={{ color: "black" }} key={index}>{skills}</motion.li>)}</ul>
             </motion.div>
             <motion.div className="box" whileHover={{ background: "grey", color: "black" }} variants={variants}>
                <h2>Programming Languages</h2>
-               <ul>{programmingLanguages.map((language, index) => <motion.li whileHover={{color: "black"}} key={index}>{language}</motion.li>)}</ul>
+               <ul>{programmingLanguages.map((language, index) => <motion.li whileHover={{ color: "black" }} key={index}>{language}</motion.li>)}</ul>
             </motion.div>
          </motion.div>
       </motion.div>
